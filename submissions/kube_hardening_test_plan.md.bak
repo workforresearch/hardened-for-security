@@ -4,11 +4,11 @@ Here we are trying to hardened kubernetes cluster via Kube-bench run, and define
 Step 1. Closely review Kube-bench findings and threat model any implications based on Rancher Benchmark: 
 	    Use the Rancher Benchmark Assessment PDF and think back to your threat model to reason through the finding. 
 	    Pay special attention to how the risk can be realized versus just trying to address findings.
-=> Ques 1. How will you test the changes?
+Ques 1. How will you test the changes?
 	    Create a plan on how to test the change. Really think through the implications of the change. 
 	    Often this needs to be closely coordinated with other teams and tested in a non-production environment.
 	
-=> Ques 2.	How will you ensure the changes don't negatively affect your cluster?
+Ques 2.	How will you ensure the changes don't negatively affect your cluster?
         To ensure the negative effect we'll Create a non-production cluster representative of your production. because
 	    Sometimes problems due to hardening steps do not materialize unless there is a load on the system or traffic. 
 	    One technique is canary testing, where we split some production traffic to the staging environment and test there. 

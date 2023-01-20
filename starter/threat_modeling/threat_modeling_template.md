@@ -50,19 +50,19 @@ According to the Docker-bench evaluation with cis-1.2 :
 There are multiple failed we got but we trying to fix some of them: 
 
 	[FAIL] 5.10 Ensure that the memory usage for containers is limited (Scored)
-	     => for this we specify the memory size for container by this command:
+	       for this we specify the memory size for container by this command:
 			docker run --interactive --tty --memory 256m <image name> /bin/bash
 			at build time:
 				docker buld -t image-name --no-cache true --memory 256mb .
 		According the hardened:
-		![alt-text](../../submissions/memory_usage.PNG)
+![alt-text](../../submissions/memory_usage.PNG)
 		
     [FAIL] 5.14 Ensure that the 'on-failure' container restart policy is set to '5' (Scored)
-		 => docker run -u --detach --restart=on-failure:5 researchwork/udacitysecurity:hardened-v1.0
-		 ![alt-text](../../submissions/restart_policy.PNG)
+		   docker run -u --detach --restart=on-failure:5 researchwork/udacitysecurity:hardened-v1.0
+![alt-text](../../submissions/restart_policy.PNG)
 	
 	[FAIL] 5.22 Ensure that docker exec commands are not used with the privileged option (Scored)
-		 => To overcome this we should not use --privilege flag 
-		 ![alt-text](../../submissions/previlieged_flag.PNG)
+		   To overcome this we should not use --privilege flag 
+![alt-text](../../submissions/previlieged_flag.PNG)
 	Finally Docker hardened image:
-		 ![alt-text](../../submissions/hardened_image.jpg)
+![alt-text](../../submissions/hardened_image.jpg)
